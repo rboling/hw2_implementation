@@ -31,3 +31,30 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-12 01:18:07
 
 
 Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-09-12 01:18:07 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-12 01:20:33 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-12 01:20:33 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-09-12 01:20:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-12 01:20:33 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-09-12 01:20:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-12 01:20:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-12 01:20:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-12 01:20:33 -0400
