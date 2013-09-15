@@ -1,1 +1,499 @@
-<h1>First Page Up!</h1>
+
+<div id='question' style='position:absolute;top:10px;left:10px'></div>
+<div id='survey' style='position:absolute;top:10px;left:10px;visibility:hidden'>
+<b>For the Ribbon interface:</b><br>
+Mental Demand: On a scale of 1-5 (1=low, 5=high), how much mental and perceptual activity was required?<br>
+<select id='q1'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Physical Demand: On a scale of 1-5 (1=low, 5=high), how much physical activity was required?<br>
+<select id='q2'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Temporal Demand: On a scale of 1-5 (1=low, 5=high), how much pressure did you feel due to the pace at which tasks or task elements occurred?<br>
+<select id='q3'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Overall Performance: On a scale of 1-5 (1=low, 5=high), how successful were you in performing the task?<br>
+<select id='q4'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Frustration Level: On a scale of 1-5 (1=low, 5=high), how irritated, stressed, and annoyed did you feel during the task?<br>
+<select id='q5'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Effort: On a scale of 1-5 (1=low, 5=high), How hard did you have to work (mentally and physically) to accomplish your level of performance?<br>
+<select id='q6'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><hr>
+
+<b>For the CommandMaps interface:</b><br>
+Mental Demand: On a scale of 1-5 (1=low, 5=high), how much mental and perceptual activity was required?<br>
+<select id='q7'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Physical Demand: On a scale of 1-5 (1=low, 5=high), how much physical activity was required?<br>
+<select id='q8'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Temporal Demand: On a scale of 1-5 (1=low, 5=high), how much pressure did you feel due to the pace at which tasks or task elements occurred?<br>
+<select id='q9'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Overall Performance: On a scale of 1-5 (1=low, 5=high), how successful were you in performing the task?<br>
+<select id='q10'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Frustration Level: On a scale of 1-5 (1=low, 5=high), how irritated, stressed, and annoyed did you feel during the task?<br>
+<select id='q11'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><br>
+
+Effort: On a scale of 1-5 (1=low, 5=high), How hard did you have to work (mentally and physically) to accomplish your level of performance?<br>
+<select id='q12'>
+<option value='0'>Please select...</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+</select><br><hr>
+
+Which interface do you prefer?<br>
+<select id='q13'>
+<option value='0'>Please select...</option>
+<option value='1'>Ribbon</option>
+<option value='2'>CommandMaps</option>
+</select><br><hr>
+<button onclick='validateSurvey()'>Click Here to Submit Your Responses!</button>
+</div>
+
+<div id='notes' style='position:absolute;left:810px;top:10px;right:0px;'></div>
+<div id='data' style='position:fixed;right:10px;bottom:10px;'></div>
+
+<div id='menu' style='visibility:hidden;position:absolute;left:0px;top:0px;'>
+<img id='menuimg' src='./images/menu_main.png' onmousemove='moveData(event)' onclick='checkClick(event)'></img>
+</div>
+
+<div id='ribbon' style='visibility:hidden;position:absolute;left:0px;top:0px;'>
+<img id='ribbonimg' src='./images/ribbon_main.png' onmousemove='moveData(event)' onclick='checkClick(event)'></img>
+</div>
+
+<div id='command' style='visibility:hidden;position:absolute;left:0px;top:0px;'>
+<img id='commandimg' src='./images/command_main.png' onmousemove='moveData(event)' onclick='checkClick(event)'></img>
+</div>
+<script>
+
+// FOR THE FINAL VERSION:
+// 1. uncomment the if (qNum >= 60) sections -- there are 2 occurrences
+// 2. uncomment the menuArray.length and delete the 10 in "if (qNum < 10)//menuArray.length)"
+
+var menuBar = document.getElementById('menu');
+var qBox = document.getElementById('question');
+var notesBox = document.getElementById('notes');
+
+var qNum = 0;
+var currentMenu = '';
+
+var xoffset = 0;
+var yoffset = 0;
+
+// array of tasks
+var taskArray = [];
+taskArray.push('Click on the <b>Bold</b> icon.');
+taskArray.push('Click on the <b>Align Center</b> icon.');
+taskArray.push('Click on the <b>Change text color</b> icon (A with a red line underneath it.');
+taskArray.push('Click on the <b>Insert Symbol</b> icon.');
+taskArray.push('Click on the <b>Insert Picture</b> icon.');
+taskArray.push('Click on the <b>View Full Screen</b> icon.');
+
+// array of target boundaries for menus for each task
+var menuLeft = [262,382,665,237,237,187];
+var menuTop = [95,95,95,120,379,532];
+var menuRight = [292,409,700,466,466,469];
+var menuBottom = [126,126,126,140,403,552];
+
+// array of ribbons to correctly accomplish each of the 6 tasks
+var ribbonCorrect = ['ribbon_main','ribbon_main','ribbon_main','ribbon_insert','ribbon_insert','ribbon_view'];
+
+// array of target boundaries for ribbons for each task
+var ribbonLeft = [86,308,157,663,104,56];
+var ribbonTop = [77,78,98,76,54,54];
+var ribbonRight = [115,332,192,754,150,116];
+var ribbonBottom = [97,98,122,98,108,123];
+
+// array of boundaries for commandmaps
+var commandLeft = [86,308,157,663,104,56];
+var commandTop = [77,78,98,184,162,484];
+var commandRight = [115,332,192,754,150,116];
+var commandBottom = [97,98,122,206,216,553];
+
+
+var qArray = []; // array of tasks/questions
+var menuArray = []; // array of menu types (menu, ribbon, command)
+
+// correct submenu/ribbon for each task
+var correctMenu = [];
+
+// correct coordinates for each task
+var correctLeft = [];
+var correctRight = []
+var correctTop = [];
+var correctBottom = [];
+
+for (i=1;i<=30;i++)
+{
+	menuArray.push('ribbon');
+	qArray.push('Familiarization Block (This is to familiarize yourself with the tasks only. You will not be tested on your speed on this section.)<br><br>Ribbon Task #' + i + '/30: ' + taskArray[(i-1)%6]);
+	correctMenu.push(ribbonCorrect[(i-1)%6]);
+	correctLeft.push(ribbonLeft[(i-1)%6]);
+	correctTop.push(ribbonTop[(i-1)%6]);
+	correctRight.push(ribbonRight[(i-1)%6]);
+	correctBottom.push(ribbonBottom[(i-1)%6]);
+}
+for (i=1;i<=30;i++)
+{
+	menuArray.push('command');
+	qArray.push('Familiarization Block (This is to familiarize yourself with the tasks only. You will not be tested on your speed on this section.)<br><br>CommandMaps Task #' + i + '/30: ' + taskArray[(i-1)%6])
+	correctMenu.push('command_show');
+	correctLeft.push(commandLeft[(i-1)%6]);
+	correctTop.push(commandTop[(i-1)%6]);
+	correctRight.push(commandRight[(i-1)%6]);
+	correctBottom.push(commandBottom[(i-1)%6]);
+}
+
+for (i=1;i<=90;i++)
+{
+	menuArray.push('ribbon');
+	qArray.push('Performance Block (Do these tasks as fast and accurately as you can!)<br><br>Ribbon Task #' + i + '/90: ' + taskArray[(i-1)%6]);
+	correctMenu.push(ribbonCorrect[(i-1)%6]);
+	correctLeft.push(ribbonLeft[(i-1)%6]);
+	correctTop.push(ribbonTop[(i-1)%6]);
+	correctRight.push(ribbonRight[(i-1)%6]);
+	correctBottom.push(ribbonBottom[(i-1)%6]);
+}
+for (i=1;i<=90;i++)
+{
+	menuArray.push('command');
+	qArray.push('Performance Block (Do these tasks as fast and accurately as you can!)<br><br>CommandMaps Task #' + i + '/90: ' + taskArray[(i-1)%6]);
+	correctMenu.push('command_show');
+	correctLeft.push(commandLeft[(i-1)%6]);
+	correctTop.push(commandTop[(i-1)%6]);
+	correctRight.push(commandRight[(i-1)%6]);
+	correctBottom.push(commandBottom[(i-1)%6]);
+}
+
+// data points
+var startTimeArray = []; // start times for each task
+var endTimeArray = []; // end times for each task
+var timeArray = []; // time to completion
+
+// cycles through all images once, which brings them into cache
+var loadAllImages = function()
+{
+	var menuImages = ['menu_edit','menu_file','menu_font','menu_format','menu_insert','menu_main','menu_table','menu_tools','menu_view','menu_window','menu_word'];
+	var ribbonImages = ['ribbon_file','ribbon_insert','ribbon_mailings','ribbon_main','ribbon_pagelayout','ribbon_references','ribbon_review','ribbon_view'];
+	var commandImages = ['command_main','command_show'];
+	
+	for (i=0;i<menuImages.length;i++)
+	{
+		document.getElementById('menuimg').src = './images/' + menuImages[i] + '.png';
+	}
+	
+	for (i=0;i<ribbonImages.length;i++)
+	{
+		document.getElementById('ribbonimg').src = './images/' + ribbonImages[i] + '.png';
+	}
+	
+	for (i=0;i<commandImages.length;i++)
+	{
+		document.getElementById('commandimg').src = './images/' + commandImages[i] + '.png';
+	}
+
+}
+
+var displayQuestion = function()
+{
+	notesBox.innerHTML = '';
+	qBox.innerHTML = qArray[qNum] + "<br><button onclick='displayMenu()'>Next</button>";
+	document.getElementById(menuArray[qNum]+'img').src = './images/' + menuArray[qNum]+'_main.png';
+	currentMenu = menuArray[qNum] + '_main';
+}
+
+var displayMenu = function()
+{
+	notesBox.innerHTML = qArray[qNum];
+	qBox.style.visibility = 'hidden';
+	document.getElementById(menuArray[qNum]).style.visibility = 'visible';
+//	if (qNum >=60)
+//	{
+		startTimeArray.push(Date.now());
+//	}
+}
+
+var moveData = function(event)
+{
+	document.getElementById('data').innerHTML=parseInt(event.clientX-xoffset) + ',' + parseInt(event.clientY-yoffset);
+}
+
+var checkClick = function(event)
+{
+	var x = event.clientX-xoffset;
+	var y = event.clientY-yoffset;
+	var currentImg = document.getElementById(menuArray[qNum]+'img');
+
+	if (menuArray[qNum] == 'menu')
+	{
+		if (y>=0 && y<=20)
+		{
+			if (x>=41 && x<=101)
+			{
+				currentImg.src = './images/menu_word.png';
+				currentMenu = 'menu_word';
+			}
+			else if (x>=102 && x<=143)
+			{
+				currentImg.src = './images/menu_file.png';
+				currentMenu = 'menu_file';
+			}
+			else if (x>=144 && x<=187)
+			{
+				currentImg.src = './images/menu_edit.png';
+				currentMenu = 'menu_edit';
+			}
+			else if (x>=188 && x<=237)
+			{
+				currentImg.src = './images/menu_view.png';
+				currentMenu = 'menu_view';
+			}
+			else if (x>=238 && x<=294)
+			{
+				currentImg.src = './images/menu_insert.png';
+				currentMenu = 'menu_insert';
+			}
+			else if (x>=295 && x<=360)
+			{
+				currentImg.src = './images/menu_format.png';
+				currentMenu = 'menu_format';
+			}
+			else if (x>=361 && x<=409)
+			{
+				currentImg.src = './images/menu_font.png';
+				currentMenu = 'menu_font';
+			}
+			else if (x>=410 && x<=465)
+			{
+				currentImg.src = './images/menu_tools.png';
+				currentMenu = 'menu_tools';
+			}
+			else if (x>=466 && x<=521)
+			{
+				currentImg.src = './images/menu_table.png';
+				currentMenu = 'menu_table';
+			}
+			else if (x>=522 && x<=592)
+			{
+				currentImg.src = './images/menu_window.png';
+				currentMenu = 'menu_window';
+			}
+		}
+	}
+	else if (menuArray[qNum] == 'ribbon')
+	{
+		if (y>=31 && y<=51)
+		{
+			if (x>=9 && x<=65)
+			{
+				currentImg.src = './images/ribbon_file.png';
+				currentMenu = 'ribbon_file';
+			}
+			else if (x>=69 && x<=124)
+			{
+				currentImg.src = './images/ribbon_main.png';
+				currentMenu = 'ribbon_main';
+			}
+			else if (x>=128 && x<=181)
+			{
+				currentImg.src = './images/ribbon_insert.png';
+				currentMenu = 'ribbon_insert';
+			}
+			else if (x>=185 && x<=271)
+			{
+				currentImg.src = './images/ribbon_pagelayout.png';
+				currentMenu = 'ribbon_pagelayout';
+			}
+			else if (x>=275 && x<=355)
+			{
+				currentImg.src = './images/ribbon_references.png';
+				currentMenu = 'ribbon_references';
+			}
+			else if (x>=359 && x<=427)
+			{
+				currentImg.src = './images/ribbon_mailings.png';
+				currentMenu = 'ribbon_mailings';
+			}
+			else if (x>=431 && x<=491)
+			{
+				currentImg.src = './images/ribbon_review.png';
+				currentMenu = 'ribbon_review';
+			}
+			else if (x>=495 && x<=544)
+			{
+				currentImg.src = './images/ribbon_view.png';
+				currentMenu = 'ribbon_view';
+			}
+		}
+	}
+	else if (menuArray[qNum] == 'command')
+	{
+		if (x>=70 && x<=208 && y>=31 && y<=51)
+		{
+			currentImg.src = './images/command_show.png';
+			currentMenu = 'command_show';
+		}
+	}
+	
+	
+	if (currentMenu == correctMenu[qNum])
+	{
+		if (x>=correctLeft[qNum] && x<=correctRight[qNum] && y>=correctTop[qNum] && y<=correctBottom[qNum])
+		{
+	//		if (qNum >=60)
+	//		{
+				endTimeArray.push(Date.now());
+				timeArray.push(endTimeArray[endTimeArray.length-1]-startTimeArray[startTimeArray.length-1]);
+	//		}
+			goToNextQuestion();
+		}
+	
+	}
+}
+
+var goToNextQuestion = function()
+{
+	qBox.style.visibility = 'visible';
+	document.getElementById(menuArray[qNum]).style.visibility = 'hidden';
+	qNum++;
+	if (qNum < 10)//menuArray.length)
+	{
+		displayQuestion();
+	}
+	else {
+		displayEndInstructions();
+		//qBox.innerHTML = JSON.stringify(timeArray);//'Congratulations on finishing!';
+	}
+}
+
+var displayEndInstructions = function()
+{
+	notesBox.innerHTML = '';
+	qBox.innerHTML = "<b>You're almost done! Just answer a few quick questions and then you'll be done!</b><br><br>We will ask you to rate each interface (Ribbon vs. CommandMaps) on a few measures and then tell us which you prefer.<br><br><button onclick='displaySurvey()'>Next</button>";
+}
+
+var displaySurvey = function()
+{
+	qBox.innerHTML = '';
+	document.getElementById('data').style.visibility = 'hidden';
+	document.getElementById('survey').style.visibility = 'visible';
+}
+
+var validateSurvey = function()
+{
+	var validate=true;
+	for (i=1;i<=13;i++)
+	{
+		var q = document.getElementById('q'+i);
+		if (q.options[q.selectedIndex].value == "0")
+		{
+			validate=false;
+		}
+	}
+	
+	if (!validate)
+	{
+		alert('Please make sure you answer all the questions. At least one of your answers is not yet completed.')
+	}
+	else {
+		var postString = 'startTimeArray=' + JSON.stringify(startTimeArray) + '&endTimeArray=' + JSON.stringify(endTimeArray) + '&timeArray=' + JSON.stringify(timeArray);
+		
+		for (i=1;i<=13;i++)
+		{
+			var q = document.getElementById('q'+i);
+			postString += '&q' + i + '=' + q.options[q.selectedIndex].value;
+		}
+		document.getElementById('survey').innerHTML = postString;
+	}
+}
+
+var displayInstructions = function()
+{
+	qBox.innerHTML = "Thank you for participating in this study.<br><br>If you've ever used Microsoft Word, you know that there are different interfaces between older and newer versions of Microsoft Word.<br><br>We are trying to determine which interface is the fastest and which is most preferable.<br><br>The 2 interfaces being tested are the <b>Ribbon</b> and <b>CommandMaps</b> interfaces<br><br><b>First we will familiarize you with each of the interfaces (Familiarization Block) then we will test your speed on each of the two interfaces (Performance Block).</b><br><br>Click [Next] to start.<br><br><button onclick='displayQuestion()'>Next</button>";
+}
+
+loadAllImages();
+displayInstructions();
+</script>
