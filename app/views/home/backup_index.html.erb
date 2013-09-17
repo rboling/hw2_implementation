@@ -289,10 +289,10 @@ var displayMenu = function()
 	notesBox.innerHTML = qArray[qNum];
 	qBox.style.visibility = 'hidden';
 	document.getElementById(menuArray[qNum]).style.visibility = 'visible';
-	if (qNum >=60)
-	{
+//	if (qNum >=60)
+//	{
 		startTimeArray.push(Date.now());
-	}
+//	}
 }
 
 var moveData = function(event)
@@ -422,11 +422,11 @@ var checkClick = function(event)
 	{
 		if (x>=correctLeft[qNum] && x<=correctRight[qNum] && y>=correctTop[qNum] && y<=correctBottom[qNum])
 		{
-			if (qNum >=60)
-			{
+	//		if (qNum >=60)
+	//		{
 				endTimeArray.push(Date.now());
 				timeArray.push(endTimeArray[endTimeArray.length-1]-startTimeArray[startTimeArray.length-1]);
-			}
+	//		}
 			goToNextQuestion();
 		}
 	
@@ -438,7 +438,7 @@ var goToNextQuestion = function()
 	qBox.style.visibility = 'visible';
 	document.getElementById(menuArray[qNum]).style.visibility = 'hidden';
 	qNum++;
-	if (qNum < menuArray.length)
+	if (qNum < 10)//menuArray.length)
 	{
 		displayQuestion();
 	}
