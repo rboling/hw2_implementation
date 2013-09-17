@@ -478,14 +478,34 @@ var validateSurvey = function()
 		alert('Please make sure you answer all the questions. At least one of your answers is not yet completed.')
 	}
 	else {
+		var xmlhttp;
+		if(window.XMLHttpRequest)
+		{	//IE7+, Firefox, Opera, Chrome, Safari
+			xmlhttp = new XMLHttpRequest();
+		}
+		else
+		{	//For IE6, IE5
+			xmlhttp = new ActiveObject("Microsoft.XMLHTTP");
+		}
 		var postString = 'startTimeArray=' + JSON.stringify(startTimeArray) + '&endTimeArray=' + JSON.stringify(endTimeArray) + '&timeArray=' + JSON.stringify(timeArray);
 		
+		var question_array = [];
+
 		for (i=1;i<=13;i++)
 		{
 			var q = document.getElementById('q'+i);
 			postString += '&q' + i + '=' + q.options[q.selectedIndex].value;
+			question_array[i - 1] = q.options[q.selectedIndex].value;
 		}
 		document.getElementById('survey').innerHTML = postString;
+		$.ajax({ url: 'http://secret-retreat-5409.herokuapp.com/responses',
+		  type: 'POST',
+		  beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+		  data: $.param({"response": {"time1": parseInt(timeArray[0]),"time2": parseInt(timeArray[1]),"time3": parseInt(timeArray[2]),"time4": parseInt(timeArray[3]),"time5": parseInt(timeArray[4]),"time6": parseInt(timeArray[5]), "time7": parseInt(timeArray[6]), "time8": parseInt(timeArray[7]), "time9": parseInt(timeArray[8]), "time10": parseInt(timeArray[9]), "q1": parseInt(question_array[0]),"q2": parseInt(question_array[1]),"q3": parseInt(question_array[2]),"q4": parseInt(question_array[3]),"q5": parseInt(question_array[4]),"q6": parseInt(question_array[5]),"q7": parseInt(question_array[6]),"q8": parseInt(question_array[7]),"q9": parseInt(question_array[8]),"q10": parseInt(question_array[9]),"q11": parseInt(question_array[10]),"q12": parseInt(question_array[11]), "q13": parseInt(question_array[12])}}),
+		  success: function() {
+		    alert("Everything has been sent!");
+		  }
+		});
 	}
 }
 

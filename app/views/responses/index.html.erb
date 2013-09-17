@@ -1,0 +1,71 @@
+<h1>Listing responses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time1</th>
+      <th>Time2</th>
+      <th>Time3</th>
+      <th>Time4</th>
+      <th>Time5</th>
+      <th>Time6</th>
+      <th>Time7</th>
+      <th>Time8</th>
+      <th>Time9</th>
+      <th>Time10</th>
+      <th>Q1</th>
+      <th>Q2</th>
+      <th>Q3</th>
+      <th>Q4</th>
+      <th>Q5</th>
+      <th>Q6</th>
+      <th>Q7</th>
+      <th>Q8</th>
+      <th>Q9</th>
+      <th>Q10</th>
+      <th>Q11</th>
+      <th>Q12</th>
+      <th>Q13</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @responses.each do |response| %>
+      <tr>
+        <td><%= response.time1 %></td>
+        <td><%= response.time2 %></td>
+        <td><%= response.time3 %></td>
+        <td><%= response.time4 %></td>
+        <td><%= response.time5 %></td>
+        <td><%= response.time6 %></td>
+        <td><%= response.time7 %></td>
+        <td><%= response.time8 %></td>
+        <td><%= response.time9 %></td>
+        <td><%= response.time10 %></td>
+        <td><%= response.q1 %></td>
+        <td><%= response.q2 %></td>
+        <td><%= response.q3 %></td>
+        <td><%= response.q4 %></td>
+        <td><%= response.q5 %></td>
+        <td><%= response.q6 %></td>
+        <td><%= response.q7 %></td>
+        <td><%= response.q8 %></td>
+        <td><%= response.q9 %></td>
+        <td><%= response.q10 %></td>
+        <td><%= response.q11 %></td>
+        <td><%= response.q12 %></td>
+        <td><%= response.q13 %></td>
+        <td><%= link_to 'Show', response %></td>
+        <td><%= link_to 'Edit', edit_response_path(response) %></td>
+        <td><%= link_to 'Destroy', response, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Response', new_response_path %>
