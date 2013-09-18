@@ -1,0 +1,54 @@
+class AddMoreTimeFieldsToReponses < ActiveRecord::Migration
+  def change
+    add_column :responses, :time11, :integer
+    add_column :responses, :time12, :integer
+    add_column :responses, :time13, :integer
+    add_column :responses, :time14, :integer
+    add_column :responses, :time15, :integer
+    add_column :responses, :time16, :integer
+    add_column :responses, :time17, :integer
+    add_column :responses, :time18, :integer
+    add_column :responses, :time19, :integer
+    add_column :responses, :time20, :integer
+    add_column :responses, :time21, :integer
+    add_column :responses, :time22, :integer
+    add_column :responses, :time23, :integer
+    add_column :responses, :time24, :integer
+    add_column :responses, :time25, :integer
+    add_column :responses, :time26, :integer
+    add_column :responses, :time27, :integer
+    add_column :responses, :time28, :integer
+    add_column :responses, :time29, :integer
+    add_column :responses, :time30, :integer
+    add_column :responses, :time31, :integer
+    add_column :responses, :time32, :integer
+    add_column :responses, :time33, :integer
+    add_column :responses, :time34, :integer
+    add_column :responses, :time35, :integer
+    add_column :responses, :time36, :integer
+    add_column :responses, :time37, :integer
+    add_column :responses, :time38, :integer
+    add_column :responses, :time39, :integer
+    add_column :responses, :time40, :integer
+    add_column :responses, :time41, :integer
+    add_column :responses, :time42, :integer
+    add_column :responses, :time43, :integer
+    add_column :responses, :time44, :integer
+    add_column :responses, :time45, :integer
+    add_column :responses, :time46, :integer
+    add_column :responses, :time47, :integer
+    add_column :responses, :time48, :integer
+    add_column :responses, :time49, :integer
+    add_column :responses, :time50, :integer
+    add_column :responses, :time51, :integer
+    add_column :responses, :time52, :integer
+    add_column :responses, :time53, :integer
+    add_column :responses, :time54, :integer
+    add_column :responses, :time55, :integer
+    add_column :responses, :time56, :integer
+    add_column :responses, :time57, :integer
+    add_column :responses, :time58, :integer
+    add_column :responses, :time59, :integer
+    add_column :responses, :time60, :integer
+  end
+end
