@@ -26,7 +26,9 @@ class ResponsesController < ApplicationController
   # POST /responses.json
   def create
     puts "\n\n\nBack where I come from\n\n\n\n\n"
-    @response = Response.new(response_params)
+    @response = Response.new(params[:response])
+    puts "\n\n\n\n THESE ARE THE RESPONSE PARAMS \n\n\n\n"
+    puts response_params
 
     respond_to do |format|
       if @response.save
