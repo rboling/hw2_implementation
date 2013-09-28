@@ -306,7 +306,7 @@ var displayMenu = function()
 	notesBox.innerHTML = qArray[qNum];
 	qBox.style.visibility = 'hidden';
 	document.getElementById(menuArray[qNum]).style.visibility = 'visible';
-	if (qNum >=60)
+	if (trialType[qNum] == 'p')
 	{
 		startTimeArray.push(Date.now());
 	}
@@ -448,54 +448,54 @@ var checkClick = function(event)
 				{
 					if (correctTask[qNum] == 'bold')
 					{
-						rTime1.push(timeArray[qNum]);
+						rTime1.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'aligncenter')
 					{
-						rTime2.push(timeArray[qNum]);
+						rTime2.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'changetextcolor')
 					{
-						rTime3.push(timeArray[qNum]);
+						rTime3.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'symbol')
 					{
-						rTime4.push(timeArray[qNum]);
+						rTime4.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'picture')
 					{
-						rTime5.push(timeArray[qNum]);
+						rTime5.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'fullscreen')
 					{
-						rTime6.push(timeArray[qNum]);
+						rTime6.push(timeArray[timeArray.length-1]);
 					}
 				}
 				else if (correctMenu[qNum][0] == 'c') // commandmaps
 				{
 					if (correctTask[qNum] == 'bold')
 					{
-						cTime1.push(timeArray[qNum]);
+						cTime1.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'aligncenter')
 					{
-						cTime2.push(timeArray[qNum]);
+						cTime2.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'changetextcolor')
 					{
-						cTime3.push(timeArray[qNum]);
+						cTime3.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'symbol')
 					{
-						cTime4.push(timeArray[qNum]);
+						cTime4.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'picture')
 					{
-						cTime5.push(timeArray[qNum]);
+						cTime5.push(timeArray[timeArray.length-1]);
 					}
 					else if (correctTask[qNum] == 'fullscreen')
 					{
-						cTime6.push(timeArray[qNum]);
+						cTime6.push(timeArray[timeArray.length-1]);
 					}
 				}
 			}
