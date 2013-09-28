@@ -228,7 +228,7 @@ for (i=1;i<=10;i++)
 for (i=1;i<=30;i++)
 {
 	menuArray.push('ribbon');
-	qArray.push('Performance Block (Do these tasks as fast and accurately as you can!)<br><br>Ribbon Task #' + i + '/30: ' + taskArray[(i-1)%6]);
+	qArray.push('Performance Block (Do these tasks as fast and accurately as you can!)<br><br>Ribbon Task #' + i + '/30: ' + taskArray[5-((i-1)%6)]);
 	correctMenu.push(ribbonCorrect[5-((i-1)%6)]);
 	correctLeft.push(ribbonLeft[5-((i-1)%6)]);
 	correctTop.push(ribbonTop[5-((i-1)%6)]);
@@ -255,7 +255,7 @@ for (i=1;i<=10;i++)
 for (i=1;i<=30;i++)
 {
 	menuArray.push('command');
-	qArray.push('Performance Block (Do these tasks as fast and accurately as you can!)<br><br>CommandMaps Task #' + i + '/30: ' + taskArray[(i-1)%6]);
+	qArray.push('Performance Block (Do these tasks as fast and accurately as you can!)<br><br>CommandMaps Task #' + i + '/30: ' + taskArray[5-((i-1)%6)]);
 	correctMenu.push('command_show');
 	correctLeft.push(commandLeft[5-((i-1)%6)]);
 	correctTop.push(commandTop[5-((i-1)%6)]);
@@ -584,7 +584,7 @@ var validateSurvey = function()
 
 var displayInstructions = function()
 {
-	qBox.innerHTML = "Thank you for participating in this study.<br><br>The purpose of this study is to examine the performance of two interfaces: the <b> Ribbon interface (made popular by Microsoft Word)</b> and an alternative, the <b> CommandMaps interface.</b><br><br>For each interface, you will be familiarized with a set of trials and then tested immediately thereafter during which your speech and accuracy will be recorded. <br><br>After the tests, you will be asked to complete a survey.  Please note that you will not be credited for this study until <b>after you have completed the survey</b>.<br><br>Click [Next] to start.<br><br><button onclick='displayQuestion()'>Next</button>";
+	qBox.innerHTML = "Thank you for participating in this study.<br><br>The purpose of this study is to examine the performance of two interfaces: the <b> Ribbon interface (made popular by Microsoft Word)</b> and an alternative, the <b> CommandMaps interface.</b><br><br>For each interface, you will be familiarized with a set of trials and then tested immediately thereafter during which your speed and accuracy will be recorded. <br><br>After the tests, you will be asked to complete a survey.  Please note that you will not be credited for this study until <b>after you have completed the survey</b>.<br><br>Click [Next] to start.<br><br><button onclick='displayQuestion()'>Next</button>";
 }
 
 loadAllImages();
