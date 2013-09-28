@@ -443,9 +443,9 @@ var checkClick = function(event)
 	{
 		if (x>=correctLeft[qNum] && x<=correctRight[qNum] && y>=correctTop[qNum] && y<=correctBottom[qNum])
 		{
-			// play success sound
-
-			document.getElementById('success').play();
+				document.getElementById('success').pause();
+				document.getElementById('success').currentTime = 0;
+				document.getElementById('success').play();
 
 			if (trialType[qNum] == 'p')
 			{
@@ -508,11 +508,6 @@ var checkClick = function(event)
 				}
 			}
 			goToNextQuestion();
-		}
-		else
-		{
-			// play error sound
-			document.getElementById('error').play();
 		}
 	
 	}
